@@ -24,19 +24,6 @@ createOrder(cart, function () {
 Q: How to fix the above issue?  
 _A: Using Promise._
 
-Now, we will make `createOrder` function return a promise and we will capture that `promise` into a `variable`
-
-Promise is nothing but we can assume it to be empty object with some data value in it, and this data value will hold whatever this `createOrder` function will return.
-
-Since `createOrder` function is an async function and we don't know how much time will it take to finish execution.
-
-So the moment `createOrder` will get executed, it will return you a `undefined` value. Let's say after 5 secs execution finished so now `orderId` is ready so, it will fill the `undefined` value with the `orderId`.
-
-In short, When `createOrder` get executed, it immediately returns a `promise object` with `undefined` value. then javascript will continue to execute with other lines of code. After sometime when `createOrder` has finished execution and `orderId` is ready then that will `automatically` be assigned to our returned `promise` which was earlier `undefined`.
-
-Q: Question is how we will get to know `response` is ready?  
-_A: So, we will attach a `callback` function to the `promise object` using `then` to get triggered automatically when `result` is ready._
-
 ```js
 const cart = ["shoes", "pants", "kurta"];
 
@@ -61,10 +48,6 @@ But with promise, we are attaching a callback function to a promiseObject.
 There is difference between these words, passing a function and attaching a function.
 
 Promise guarantee, it will callback the attached function once it has the fulfilled data. And it will call it only once. Just once.
-
-Earlier we talked about promise are object with empty data but that's not entirely true, `Promise` are much more than that.
-
-Now let's understand and see a real promise object.
 
 fetch is a web-api which is utilized to make api call and it returns a promise.
 
@@ -91,7 +74,7 @@ console.log(user); // Promise {<Pending>}
 /**
  * When above line is executed, `fetch` makes API call and return a `promise` instantly which is in `Pending` state and Javascript doesn't wait to get it `fulfilled`
  * And in next line it console out the `pending promise`.
- * NOTE: chrome browser has some in-consistency, the moment console happens it shows in pending state but if you will expand that it will show fulfilled because chrome updated the log when promise get fulfilled.
+
  * Once fulfilled data is there in promiseResult and it is inside body in ReadableStream format and there is a way to extract data.
  */
 ```
@@ -124,10 +107,6 @@ user.then(function (data) {
 ### Interview Guide
 
 💡What is Promise?  
--> Promise object is a placeholder for certain period of time until we receive value from asynchronous operation.
-
--> A container for a future value.
-
 -> **A Promise is an object representing the eventual completion or failure of an asynchronous operation.**
 
 We are now done solving one issue of callback i.e. Inversion of Control
