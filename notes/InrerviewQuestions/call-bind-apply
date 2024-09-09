@@ -2,3 +2,12 @@ Method	Syntax	Key Feature
 call()	function.call(thisArg, arg1, arg2, ...)	Immediately calls the function with this and individual arguments
 apply()	function.apply(thisArg, [argsArray])	Immediately calls the function with this and arguments as an array
 bind()	function.bind(thisArg, arg1, arg2, ...)	Returns a new function with this bound, does not invoke immediately
+
+
+call() vs. apply():
+
+Both are used to invoke functions with a specific this value. The difference lies in how they handle arguments—call() takes them individually, while apply() takes them as an array.
+bind():
+
+Instead of invoking the function immediately, 
+bind() returns a new function with this permanently bound. You can call this returned function later, which is useful for event handlers or callbacks where you need to control the this context.
