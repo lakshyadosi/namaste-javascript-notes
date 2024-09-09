@@ -10,4 +10,10 @@ Both are used to invoke functions with a specific this value. The difference lie
 bind():
 
 Instead of invoking the function immediately, 
-bind() returns a new function with this permanently bound. You can call this returned function later, which is useful for event handlers or callbacks where you need to control the this context.
+bind() returns a new function with this permanently bound. You can call this returned function later,
+which is useful for event handlers or callbacks where you need to control the this context.
+
+example: // 5. Using apply() with built-in functions
+console.log("--- apply() with Math.max ---");
+const numbers = [5, 6, 2, 3, 7];
+console.log(Math.max.apply(null, numbers));
