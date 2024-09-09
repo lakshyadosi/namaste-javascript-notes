@@ -1,1 +1,4 @@
-
+Method	Syntax	Key Feature
+call()	function.call(thisArg, arg1, arg2, ...)	Immediately calls the function with this and individual arguments
+apply()	function.apply(thisArg, [argsArray])	Immediately calls the function with this and arguments as an array
+bind()	function.bind(thisArg, arg1, arg2, ...)	Returns a new function with this bound, does not invoke immediately
