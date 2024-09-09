@@ -1,6 +1,6 @@
 # Episode 21 : Promises
 
-> Promises are used to handle async operations in JavaScript.
+> Promises are used to handle async operations in JavaScript. 
 
 We will discuss with code example that how things used to work before `Promises` and then how it works after `Promises`
 
