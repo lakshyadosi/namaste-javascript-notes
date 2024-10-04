@@ -12,7 +12,7 @@
 
 
 
-```js
+```js 
 console.log("Namaste");
 setTimeout(function () {
   console.log("JavaScript");
